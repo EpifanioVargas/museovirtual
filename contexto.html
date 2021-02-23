@@ -4,7 +4,13 @@
         <meta charset="utf-8">
     </head>
     <style>
-        
+        *{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
         body{
             background-image: url("https://www.milenio.com/uploads/media/2019/09/11/lucha-independencia-mexico-inicio-septiembre_33_0_594_370.jpg");
             background-position: center center;
@@ -17,39 +23,44 @@
             font-family: "LaserMetal";
             src: url("Fonts/LaserMetal.ttf");
         }
+        .Fondo{
+            background-color: rgb(0, 0, 0, .8);
+            margin: auto;
+            content:'';
+
+        }
         .Caja{
             margin: auto;
-            background-color: rgb(255, 255, 255, .8);
             border-radius: 20px;
             max-width: 1000px;
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, .8);
         }
         .Museo{
             font-family: "LaserMetal";
             color: white;
             font-size: 120px;
-            color: black;
         }
         .Independencia{
             font-family: "Arial";
             color: white;
             font-size: 40px;
-            color: black;
+        }
+        .Contexto{
+            color: white;
         }
         .Texto1{
             margin: 50px;
             text-align: justify;
             font-family: "Arial";
             margin-top: 20px;
-        }
-        .Contexto{
-            font-family: "LaserMetal";
+            color: white;
         }
         .Diacronica{
             font-family: "Arial";
+            color: white;
         }
         .Linea{
-            transform: translateX(25%);
+            padding-left: 25%;
+            color: white;
         }
         .linea-tiempo {
           position: relative;
@@ -57,16 +68,18 @@
           max-width: 95vw;
           height: 815%;
           font-family: Arial;
+            
         }
 
         .linea-tiempo::before {
           content: '';
           position: absolute;
           width: 3px;
-          background-color: #000;
+          background-color: white;
           left: 50%;
           height: 100%;
           border-radius: 10px;
+        box-shadow: 0 0 20px 0 white;
         }
 
         .momento {
@@ -86,8 +99,9 @@
           right: calc(-11.11% - 11.5px);
           height: 20px;
           width: 20px;
-          background-color: #000;
+          background-color: white;
           border-radius: 50%;
+            box-shadow: 0 0 20px 0 rgba(255, 255, 255, .8);
         }
 
         .momento:nth-child(even)::after {
@@ -101,11 +115,13 @@
         }
 
         .momento .descripcion {
-          background-color: #eee;
+          background-color: white;
           border-radius: 10px;
           padding: 10px;
           line-height: 22px;
           font-size: 14px;
+            color: black;
+            box-shadow: 0 0 20px 0 rgba(255, 255, 255, .8);
         }
 
         .momento .descripcion::after {
@@ -121,25 +137,29 @@
         }
 
         .momento:nth-child(even) .descripcion {
-          background-color: #3393FE;
-          color: white;
+          background-color: white;
+          color: black;
         }
 
         .momento:nth-child(even) .descripcion::after{
           left: -10px;
           border-top: 10px solid transparent;
           border-bottom: 10px solid transparent;
-          border-right: 12px solid #3393FE;
+          border-right: 12px solid white;
           border-left: none;
         }
     </style>
     <body>
-        <div class="Caja">
+        <div class="Fondo">
+            <div class="Caja">
             <center><p1 class="Museo">Museo Vrtual</p1><br>
             <h1 class="Independencia">Independencia de México</h1></center>
             <div class="Texto1">
-                <center><h1>Contexto</h1></center>
+                <center><h1 class="Contexto">Contexto</h1></center>
+                <br>
                 <p1>La independencia de México fue la consecuencia de un proceso social y político que tuvo una solución violenta y armada que concluyo con el dominio español en la mayor parte de los territorios de la Nueva España, por lo tanto, la perdida de esta posición tuvo una importancia decisiva para la monarquía ya que los ingresos mexicanos representaban el 90% del total de los caudales americanos, así mismo otra de las causas políticas que inicio este movimiento armado fue la imposición de José Bonaparte como rey, la inconformidad de la sociedad por las decisiones del estado, era más notable ya  que las principales actividades económicas que llevaban a cabo las colonias españolas en la segunda mitad del siglo XVIII y principios del XIX, era la exportación de minerales como el oro y la plata, el decreto de libre comercio que establecieron las reformas borbónicas hizo que grandes capitales comerciales se canalizaran al avío de la minería, que para entonces era una actividad de lo más lucrativa, especialmente donde la densidad del mineral era alta. La riqueza generada era concentrada en las manos de los inversionistas y no benefició a la clase trabajadora, la cual pronto se vio empobrecida. En lo social predominaba un ambiente de desigualdad, el alto clero, comerciantes y dueños de minas eran los que controlaban la Nueva España, los criollos no tenían ningún poder de decisión y esto ocasionaba inconformidades entre ellos y también las clases bajas que se veían oprimidas.</p1>
+                <br><br><br>
+                <hr>
             </div>
             <center><h1 class="Diacronica">Linea Diacrónica</h1></center>
             <br>
@@ -514,6 +534,7 @@
                 </div>
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             </div>
+        </div>
         </div>
     </body>
 </html>
