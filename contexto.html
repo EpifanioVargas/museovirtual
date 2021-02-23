@@ -1,0 +1,519 @@
+<html>
+    <head>
+        <title>Contexto | Independencia de México</title>
+        <meta charset="utf-8">
+    </head>
+    <style>
+        
+        body{
+            background-image: url("https://www.milenio.com/uploads/media/2019/09/11/lucha-independencia-mexico-inicio-septiembre_33_0_594_370.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100%;
+        }
+        @font-face{
+            font-family: "LaserMetal";
+            src: url("Fonts/LaserMetal.ttf");
+        }
+        .Caja{
+            margin: auto;
+            background-color: rgb(255, 255, 255, .8);
+            border-radius: 20px;
+            max-width: 1000px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, .8);
+        }
+        .Museo{
+            font-family: "LaserMetal";
+            color: white;
+            font-size: 120px;
+            color: black;
+        }
+        .Independencia{
+            font-family: "Arial";
+            color: white;
+            font-size: 40px;
+            color: black;
+        }
+        .Texto1{
+            margin: 50px;
+            text-align: justify;
+            font-family: "Arial";
+            margin-top: 20px;
+        }
+        .Contexto{
+            font-family: "LaserMetal";
+        }
+        .Diacronica{
+            font-family: "Arial";
+        }
+        .Linea{
+            transform: translateX(25%);
+        }
+        .linea-tiempo {
+          position: relative;
+          width: 500px;
+          max-width: 95vw;
+          height: 815%;
+          font-family: Arial;
+        }
+
+        .linea-tiempo::before {
+          content: '';
+          position: absolute;
+          width: 3px;
+          background-color: #000;
+          left: 50%;
+          height: 100%;
+          border-radius: 10px;
+        }
+
+        .momento {
+          position: relative;
+          width: 45%;
+          box-sizing: border-box;
+        }
+
+        .momento:nth-child(even) {
+          left: 55%;
+        }
+
+        .momento::after {
+          content: '';
+          position: absolute;
+          top: calc(50% + 10px);
+          right: calc(-11.11% - 11.5px);
+          height: 20px;
+          width: 20px;
+          background-color: #000;
+          border-radius: 50%;
+        }
+
+        .momento:nth-child(even)::after {
+          left: calc(-11.11% - 8.5px);
+        }
+
+        .momento h3 {
+          margin: 10px 0px;
+          font-size: 30px;
+          text-align: center;
+        }
+
+        .momento .descripcion {
+          background-color: #eee;
+          border-radius: 10px;
+          padding: 10px;
+          line-height: 22px;
+          font-size: 14px;
+        }
+
+        .momento .descripcion::after {
+          content: '';
+          position: absolute;
+          right: -10px;
+          top: calc(50% + 10px);
+          height: 0;
+          width: 0;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-left: 12px solid #eee;
+        }
+
+        .momento:nth-child(even) .descripcion {
+          background-color: #3393FE;
+          color: white;
+        }
+
+        .momento:nth-child(even) .descripcion::after{
+          left: -10px;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-right: 12px solid #3393FE;
+          border-left: none;
+        }
+    </style>
+    <body>
+        <div class="Caja">
+            <center><p1 class="Museo">Museo Vrtual</p1><br>
+            <h1 class="Independencia">Independencia de México</h1></center>
+            <div class="Texto1">
+                <center><h1>Contexto</h1></center>
+                <p1>La independencia de México fue la consecuencia de un proceso social y político que tuvo una solución violenta y armada que concluyo con el dominio español en la mayor parte de los territorios de la Nueva España, por lo tanto, la perdida de esta posición tuvo una importancia decisiva para la monarquía ya que los ingresos mexicanos representaban el 90% del total de los caudales americanos, así mismo otra de las causas políticas que inicio este movimiento armado fue la imposición de José Bonaparte como rey, la inconformidad de la sociedad por las decisiones del estado, era más notable ya  que las principales actividades económicas que llevaban a cabo las colonias españolas en la segunda mitad del siglo XVIII y principios del XIX, era la exportación de minerales como el oro y la plata, el decreto de libre comercio que establecieron las reformas borbónicas hizo que grandes capitales comerciales se canalizaran al avío de la minería, que para entonces era una actividad de lo más lucrativa, especialmente donde la densidad del mineral era alta. La riqueza generada era concentrada en las manos de los inversionistas y no benefició a la clase trabajadora, la cual pronto se vio empobrecida. En lo social predominaba un ambiente de desigualdad, el alto clero, comerciantes y dueños de minas eran los que controlaban la Nueva España, los criollos no tenían ningún poder de decisión y esto ocasionaba inconformidades entre ellos y también las clases bajas que se veían oprimidas.</p1>
+            </div>
+            <center><h1 class="Diacronica">Linea Diacrónica</h1></center>
+            <br>
+            <div class="Linea">
+                <div class="linea-tiempo">
+                  <div class="momento">
+                    <h3>Antigua y Barbuda</h3>
+                    <div class="descripcion">
+                      Independencia del Reino Unido en 1831.
+                    </div>
+                  </div>
+                  <div class="momento">
+                    <h3>Benín</h3>
+                    <div class="descripcion">
+                      	Independencia de Francia en 1960.
+                    </div>
+                  </div>
+                  <div class="momento">
+                    <h3>Suiza</h3>
+                    <div class="descripcion">
+                      	Alianza contra el Sacro Imperio Romano Germánico en 1291.
+                    </div>
+                  </div>
+                    <div class="momento">
+                        <h3>Australia</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1901 (reconocida en 1931 con el Tratado de Westminster).
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Brunéi</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1901 (reconocida en 1931 con el Tratado de Westminster).
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Haití</h3>
+                        <div class="descripcion">
+                            Independencia de Francia en 1804. Segundo país independiente de América y primero latinoamericano.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Burundi</h3>
+                        <div class="descripcion">
+                            Independencia de Bélgica en 1962.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Canadá</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1867 (reconocida en 1931 con el Tratado de Westminster).
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Nueva Zelanda</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1907 (reconocida en 1931 con el Tratado de Westminster).
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Ruanda</h3>
+                        <div class="descripcion">
+                            Independencia de Bélgica en 1962.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Bosnia y Herzegovina</h3>
+                        <div class="descripcion">
+                            Independencia de Yugoslavia en 1992.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Chipre</h3>
+                        <div class="descripcion">
+                            Independencia de Reino Unido el 16 de agosto de 1960, pero el día de la independencia de Chipre es comúnmente celebrado el 1 de octubre.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Nigeria</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1960
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Uzbekistán</h3>
+                        <div class="descripcion">
+                            Independencia de la Unión Soviética en 1991.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Emiratos Árabes Unidos</h3>
+                        <div class="descripcion">
+                             Independencia del Reino Unido en 1971.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Marruecos</h3>
+                        <div class="descripcion">
+                            Independencia de Francia y España en 1956
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Vietnam</h3>
+                        <div class="descripcion">
+                            Declaración de la independencia de Francia en 1945.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Níger</h3>
+                        <div class="descripcion">
+                            Independencia de Francia en 1960.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Bielorrusia</h3>
+                        <div class="descripcion">
+                            Liberación de Minsk de la ocupación Alemana por tropas Soviéticas en 1944.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Catar</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1971.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Birmania</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1948
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Estados Unidos</h3>
+                        <div class="descripcion">
+                            Declaración de la independencia del Reino Unido en 1776. Consumada el 3 de septiembre de 1783.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Tonga</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1970.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Lesoto</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1966.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Burkina Faso</h3>
+                        <div class="descripcion">
+                            Independencia de Francia en 1960
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Argelia</h3>
+                        <div class="descripcion">
+                            Independencia de Francia en 1962.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Cabo Verde</h3>
+                        <div class="descripcion">
+                            Independencia del Portugal en 1975.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Venezuela</h3>
+                        <div class="descripcion">
+                            Declaración de la independencia de España en 1811.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Bolivia</h3>
+                        <div class="descripcion">
+                            Independencia de España en 1825.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Jamaica</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1962.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>República de Irlanda</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1922.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Malaui</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1964.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Ghana</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1957.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Suazilandia</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1968.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Brasil</h3>
+                        <div class="descripcion">
+                            Declarada la Independencia de Portugal en esa fecha en 1822. No fue reconocida hasta el 29 de agosto de 1825.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Croacia</h3>
+                        <div class="descripcion">
+                            Independencia de Yugoslavia en 1991.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>República de Macedonia del Norte</h3>
+                        <div class="descripcion">
+                             Independencia de Yugoslavia en 1991.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Singapur</h3>
+                        <div class="descripcion">
+                            Marca la separación de Malasia en 1965.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Tanzania</h3>
+                        <div class="descripcion">
+                            Declaración de la independencia del Reino Unido en 1961.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Argentina</h3>
+                        <div class="descripcion">
+                            Independencia de España en 1816.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Rumanía</h3>
+                        <div class="descripcion">
+                            Independencia del Imperio otomano en 1877.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Corea del Norte</h3>
+                        <div class="descripcion">
+                            Fundación del DPRK en 1948.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Tayikistán</h3>
+                        <div class="descripcion">
+                            Independencia de la Unión Soviética en 1991.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Bahamas</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1973.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Chad</h3>
+                        <div class="descripcion">
+                            Independencia de Francia en 1960.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Vaticano</h3>
+                        <div class="descripcion">
+                            Tratado Laterano firmado con Italia en 1929.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Angola</h3>
+                        <div class="descripcion">
+                            Independencia de Portugal en 1975.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Kenia</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1963.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Santo Tomé y Príncipe</h3>
+                        <div class="descripcion">
+                            Independencia de Portugal en 1975.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Filipinas</h3>
+                        <div class="descripcion">
+                            Independencia de España en 1898.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Rusia</h3>
+                        <div class="descripcion">
+                            El 25 de diciembre de 1991 es la separación formal de la Unión
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Mauricio</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1968.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Pakistán</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1947.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Baréin</h3>
+                        <div class="descripcion">
+                            Independencia del Reino Unido en 1971.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Corea del Sur</h3>
+                        <div class="descripcion">
+                            Independencia del Japón en 1945.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Costa Rica</h3>
+                        <div class="descripcion">
+                            Independencia de España en 1821.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>El Salvador</h3>
+                        <div class="descripcion">
+                            Independencia de España en 1821.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Guatemala</h3>
+                        <div class="descripcion">
+                            Independencia de España en 1821.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Honduras</h3>
+                        <div class="descripcion">
+                            Independencia del España en 1821.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>Kazajistán</h3>
+                        <div class="descripcion">
+                            Independencia de la Unión Soviética en 1991.
+                        </div>
+                    </div>
+                    <div class="momento">
+                        <h3>México</h3>
+                        <div class="descripcion">
+                            Independencia de España declarada en 1810, con el Grito de Dolores, consumada el 27 de septiembre de 1821 con la entrada del Ejército Trigarante a la Ciudad de México.
+                        </div>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+        </div>
+    </body>
+</html>
