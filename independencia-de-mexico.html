@@ -1,10 +1,10 @@
 <html>
-    <head>
-        <title>Contexto | Independencia de México</title>
-        <meta charset="utf-8">
-    </head>
-    <script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
-    
+<head>
+ <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Independencia de México</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
     <style>
         *{
   padding: 0;
@@ -13,1023 +13,281 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-        body{
-            background-image: url("https://www.milenio.com/uploads/media/2019/09/11/lucha-independencia-mexico-inicio-septiembre_33_0_594_370.jpg");
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            height: 100%;
+
+        *{
+            text-decoration: none;
+            
         }
+body{
+background-image: url("https://pbs.twimg.com/media/DKHvYAwW0Ac6pbS.jpg");
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          height: 100%;
+}
+        .Caja{
+            max-width: 100%;
+            min-height: 280%;
+            background-color: rgb(0, 0, 0, .8);
+            margin: auto;
+        }
+
+.container{
+  width: 90%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 30px;
+}
+
+
+.item{
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, .8);
+  
+  transition: all 300ms;
+  
+  position: relative;
+    border-radius: 20px;
+    color: black;
+}
+
+.item:hover:after{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.item:hover {
+  transform: scale(1.2);
+}
+
+.item-text{
+  padding: 1em;
+}
+
+
+.item-img{
+  max-width: 100%;
+  display: block;
+    border-radius: 20px;
+}
+
+
+@media screen and (min-width: 590px) {
+  
+  .container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+
+
+@media screen and (min-width: 960px) {
+  
+  .container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+}
         @font-face{
             font-family: "LaserMetal";
             src: url("Fonts/LaserMetal.ttf");
         }
-        .Fondo{
-            background-color: rgb(0, 0, 0, .8);
-            width: 100%;
-            margin: auto;
-            height: 1110%;
-            overflow: hidden;
-        }
-        .Caja{
-            margin: auto;
-            border-radius: 20px;
-            max-width: 1000px;
-        }
+        
         .Museo{
             font-family: "LaserMetal";
             color: white;
             font-size: 120px;
         }
+        
         .Independencia{
             font-family: "Arial";
             color: white;
             font-size: 40px;
         }
-        .Contexto{
-            color: white;
+        .Escudo{
+            max-width: 200px;
         }
-        .Texto1{
-            margin: 50px;
+        .Hola{
+            font-family: "Arial";
+            color: white;
+            font-size: 30px;
+            text-align: left;
+        }
+        .Bienvenida{
+            color: white;
+            font-family: "Arial";
+        }
+        .Introduccion{
+            color: white;
+            font-family: "Arial";
+        }
+        .Texto{
+            max-width: 1000px;
             text-align: justify;
             font-family: "Arial";
-            margin-top: 20px;
-            color: white;
         }
-        .Diacronica{
+        .Primer_Texto{
+            color: white;
             font-family: "Arial";
-            color: white;
         }
-        .Linea{
-            padding-left: 25%;
-            color: white;
-        }
-        .linea-tiempo {
-          position: relative;
-          width: 500px;
-          max-width: 95vw;
-          max-height: 525%;
-          font-family: Arial;
-            
-        }
-
-        .linea-tiempo::before {
-          content: '';
-          position: absolute;
-          width: 3px;
-          background-color: white;
-          left: 50%;
-          height: 100%;
-          border-radius: 10px;
-        box-shadow: 0 0 20px 0 white;
-        }
-        
-        
-        @media (max-width: 1280px){
-            
-            .Fondo{
-                width: 100%;
-                height: 1430%;
-            }
-            .linea-tiempo::before {
-                height: 100%;
-            }
-            .Abajo{
-               
-            }
-        
-        }
-    
-
-        .momento {
-          position: relative;
-          width: 45%;
-          box-sizing: border-box;
-        }
-
-        .momento:nth-child(even) {
-          left: 55%;
-        }
-
-        .momento::after {
-          content: '';
-          position: absolute;
-          top: calc(50% + 10px);
-          right: calc(-11.11% - 11.5px);
-          height: 20px;
-          width: 20px;
-          background-color: white;
-          border-radius: 50%;
+        .Mural_1{
+            max-width: 100%;
+            border-radius: 20px;
             box-shadow: 0 0 20px 0 rgba(255, 255, 255, .8);
+            transition: all 300ms;
         }
-
-        .momento:nth-child(even)::after {
-          left: calc(-11.11% - 8.5px);
-        }
-
-        .momento h3 {
-          margin: 10px 0px;
-          font-size: 30px;
-          text-align: center;
-        }
-
-        .momento .descripcion {
-          background-color: white;
-          border-radius: 10px;
-          padding: 10px;
-          line-height: 22px;
-          font-size: 14px;
-            color: black;
-            box-shadow: 0 0 20px 0 rgba(255, 255, 255, .8);
-        }
-
-        .momento .descripcion::after {
-          content: '';
-          position: absolute;
-          right: -10px;
-          top: calc(50% + 10px);
-          height: 0;
-          width: 0;
-          border-top: 10px solid transparent;
-          border-bottom: 10px solid transparent;
-          border-left: 12px solid #eee;
-        }
-
-        .momento:nth-child(even) .descripcion {
-          background-color: white;
-          color: black;
-        }
-
-        .momento:nth-child(even) .descripcion::after{
-          left: -10px;
-          border-top: 10px solid transparent;
-          border-bottom: 10px solid transparent;
-          border-right: 12px solid white;
-          border-left: none;
-        }
-        .Ejericicios{
+        .Salas{
             color: white;
             font-family: "Arial";
         }
-        .Letras{
-            color: white;
-            font-family: "Arial";
-        }
-        .Caldo{
-            transform: translateX(25%);
-        }
-        .Orcado{
+        .Desarrollado{
             color: white;
             font-family: "Arial";
         }
         
-/**
-* Styles for the puzzle
-*/
-#juego {
-  border: 1px solid black;
-  padding: 20px;
-  float: left;
-  margin: 30px 20px;
+
+.Mural_1:hover:after{
+  opacity: 1;
+  transform: scale(1);
 }
 
-#juego div {
-  width: 100%;
-  margin: 0 auto;
-    color: white;
+.Mural_1:hover {
+  transform: scale(1.2);
 }
-
-/* style for each square in the puzzle */
-#juego .puzzleSquare {
-  height: 30px;
-  width: 30px;
-  text-transform: uppercase;
-  background-color: white;
-  border: 0;
-  font: 1em sans-serif;
-}
-
-button::-moz-focus-inner {
-  border: 0;
-}
-
-/* indicates when a square has been selected */
-#juego .selected {
-  background-color: orange;
-}
-
-/* indicates that the square is part of a word that has been found */ 
-#juego .found {
-  background-color: blue;
-  color: white;
-}
-
-#juego .solved {
-  background-color: purple;
-  
-}
-
-/* indicates that all words have been found */
-#juego .complete {
-  background-color: green;
-}
-
-/**
-* Styles for the word list
-*/
-#Palabras {
-  padding-top: 20px;
-  -moz-column-count: 2;
-  -moz-column-gap: 20px;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 20px;
-  column-count: 2;
-  column-gap: 20px;
-  width: 300px;
-}
-
-#Palabras ul {
-  list-style-type: none;
-    color: white;
-}
-
-#Palabras li {
-  padding: 3px 0;
-  font: 1em sans-serif;
-}
-
-/* indicates that the word has been found */
-#Palabras .wordFound {
-  text-decoration: line-through;
-  color: gray;
-}
-
-/**
-* Styles for the button
-*/
-#solve {
-  margin: 0 30px;
-}
-#pantalla{
-                border: groove 8px gold;
-                background: lightgreen;  
-            }
-        .VolverJuagar{
-            color: black;
+        h3{
             font-family: "Arial";
-            background-color: white;
-            width: 200px;
-            height: 50px;
-            font-size: 15px;
         }
-        .TituloComentario{
+        .Resumen{
+            font-family: "Arial";
+            text-align: left;
+        }
+        .Creditos{
+            max-width: 1000px;
+            text-align: justify;
+            font-family: "Arial";
+        }
+        .Jonathan{
+            float: left;
+            max-width: 400px;
+            padding: 20px;
             color: white;
-            font-family: "Arial";
+            transform: translatex(25%);
         }
-        .nombre{
-            font-family: "Arial";
-            color: black;
-            font-size: 15px;
-            width: 500px;
-            height: 50px;
-            background-color: white;
+        .Centro{
+            text-align: center;
         }
-        .comentario{
-            font-family: "Arial";
-            color: black;
-            font-size: 15px;
-            width: 500px;
-            background-color: white;
+        .Imagen-Jonathan{
+            border-radius: 50%;
+            width: 30%;
         }
-        .Guardar{
-            background-color: white;
-            color: black;
-            font-family: "Arial";
-            font-size: 15px;
-            border: none;
-            width: 500px;
-            height: 50px;
+        .Alma{
+            background-color: tomato;
+            float: left;
+            max-width: 500px;
+            
         }
         
     </style>
+<body>
+    <div class="Caja">
+    <center><p1 class="Museo">Museo Virtual</p1></center>
+    <center><p1 class="Independencia">Independencia de México</p1></center>
+    <center><img class="Escudo" src="Images/Escudo%20Mexicano.png"</center>
+        <h1 class="Introduccion">Introducción</h1>
+        <div class="Texto">
+            <h1 class="Hola">Hola.</h1>
+            <br>
+             <p1 class="Bienvenida">Bienvenid@ a nuestro museo virtual que tiene la misión de divulgar temas de carácter educativo para culturizar a la población y sociedad en México, haciendo uso de las nuevas tecnologías de la información y comunicación debido a la situación global.</p1>
+            <br><br>
+            <hr> <br>
+            <p1 class="Primer_Texto">La independencia de México fue la consecuencia de un proceso político y social resuelto con violencia, que concluyo con el dominio español en la mayor parte de los territorios de la Nueva España, por lo tanto la perdida de esta posesión tuvo una importancia decisiva para la monarquía ya que los ingresos mexicanos representaban el 90% del total de los caudales americanos al final del periodo colonial, por lo tanto lograr que la independencia de México se consumara fue un proceso organizado a través de distintas etapas y transformaciones  que tenia una idea clara y concisa, ser una nación independiente es así que durante el transcurso de la contienda armada había una división clara la que era los que apoyaban la corona española, denominados realistas y los que apoyaban la idea de una nación libre, llamados insurgentes, protagonizando altas y bajas en las múltiples litis que sucedían.</p1><br><br>
+            <img src="Images/Mexico%20desconocido.jpg" class="Mural_1">
+            <br><br><br>
+            <hr><br>
+            <center><h1 class="Salas">Salas</h1></center>
+        </div>
+  <div class="container">
+    <a href="contexto.html"><div class="item">
+      <img src="Images/Antecedentes.jpg" alt="" class="item-img">
+      <div class="item-text">
+        <h3>Contexto</h3>
+        <p class="Resumen">Conoce los antecedentes que hubo para que los indígenas, criollos, mestizos, etc. Se levantaran en armas exigiendo libertad e independencia ante el régimen de la Nueva España.</p>
+      </div>
+    </div></a>
     
-    <body>
-        <div class="Fondo">
-            <div class="Caja">
-            <center><p1 class="Museo">Museo Vrtual</p1><br>
-            <h1 class="Independencia">Independencia de México</h1></center>
-            <div class="Texto1">
-                <center><h1 class="Contexto">Contexto</h1></center>
-                <br>
-                <p1>La independencia de México fue la consecuencia de un proceso social y político que tuvo una solución violenta y armada que concluyo con el dominio español en la mayor parte de los territorios de la Nueva España, por lo tanto, la perdida de esta posición tuvo una importancia decisiva para la monarquía ya que los ingresos mexicanos representaban el 90% del total de los caudales americanos, así mismo otra de las causas políticas que inicio este movimiento armado fue la imposición de José Bonaparte como rey, la inconformidad de la sociedad por las decisiones del estado, era más notable ya  que las principales actividades económicas que llevaban a cabo las colonias españolas en la segunda mitad del siglo XVIII y principios del XIX, era la exportación de minerales como el oro y la plata, el decreto de libre comercio que establecieron las reformas borbónicas hizo que grandes capitales comerciales se canalizaran al avío de la minería, que para entonces era una actividad de lo más lucrativa, especialmente donde la densidad del mineral era alta. La riqueza generada era concentrada en las manos de los inversionistas y no benefició a la clase trabajadora, la cual pronto se vio empobrecida. En lo social predominaba un ambiente de desigualdad, el alto clero, comerciantes y dueños de minas eran los que controlaban la Nueva España, los criollos no tenían ningún poder de decisión y esto ocasionaba inconformidades entre ellos y también las clases bajas que se veían oprimidas.</p1>
-                <br><br><br>
-                <hr>
-            </div>
-            <center><h1 class="Diacronica">Linea Diacrónica</h1></center>
+    <div class="item">
+      <img src="Images/Primera%20etapa%20portada.jpg" alt="" class="item-img">
+      <div class="item-text">
+        <h3>Primera Etapa</h3>
+        <p class="Resumen">Infórmate sobre el grito de dolores dado por el cura Miguel Hidalgo y Costilla que marcó el levantamiento de armas para buscar una nación renacida e independiente.</p>
+      </div>
+    </div>
+    
+    <div class="item">
+      <img src="Images/Segunda%20etapa%20portada.jpg" alt="" class="item-img">
+      <div class="item-text">
+        <h3>Segunda Etapa</h3>
+        <p class="Resumen">Averigua el periodo donde los insurgentes tuvieron varios triunfos que incluso llegaron a gestionar el primer Congreso de Anáhuac de la actual República Mexicana.</p>
+      </div>
+    </div>
+    
+    <div class="item">
+      <img src="Images/Tercera%20etapa%20portada.png" alt="" class="item-img">
+      <div class="item-text">
+        <h3>Tercera Etapa</h3>
+        <p class="Resumen">Conoce las fuerzas insurgentes que comenzaron a desorganizarse y su lucha se dirigió a pequeñas provincias en el sur del país donde Vicente Guerrero había logrado mantener viva la independencia.</p>
+      </div>
+    </div>
+    
+    
+    <div class="item">
+      <img src="Images/Cuarta%20etapa%20portada.jpg" alt="" class="item-img">
+      <div class="item-text">
+        <h3>Cuarta Etapa</h3>
+        <p class="Resumen">Investiga como es que llego el ejército Trigarante victorioso a la ciudad de México comandado por Agustín de Iturbide y Vicente Guerrero dando fin a una época de esclavitud y de malos tratos iniciando una nación renacida e renacida e independiente.</p>
+      </div>
+    </div>
+    
+    <div class="item">
+      <img src="Images/Conslusiones%20portada.jpg" alt="" class="item-img">
+      <div class="item-text">
+        <h3>Conclusiones</h3>
+        <p class="Resumen">Finalmente observa las conclusiones de cada uno de los hechos de la independencia de México, así como colaborar con una pequeña opinión sobre la temática del museo virtual  </p>
+      </div>
+    </div>
+  </div>
+        <div class="Creditos">
+            <hr><br>
+            <center><h1 class="Desarrollado">Desarrollado por:</h1></center>
             <br>
-            <div class="Linea">
-                <div class="linea-tiempo">
-                  <div class="momento">
-                    <h3>Antigua y Barbuda</h3>
-                    <div class="descripcion">
-                      Independencia del Reino Unido en 1831.
-                    </div>
-                  </div>
-                  <div class="momento">
-                    <h3>Benín</h3>
-                    <div class="descripcion">
-                      	Independencia de Francia en 1960.
-                    </div>
-                  </div>
-                  <div class="momento">
-                    <h3>Suiza</h3>
-                    <div class="descripcion">
-                      	Alianza contra el Sacro Imperio Romano Germánico en 1291.
-                    </div>
-                  </div>
-                    <div class="momento">
-                        <h3>Australia</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1901 (reconocida en 1931 con el Tratado de Westminster).
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Brunéi</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1901 (reconocida en 1931 con el Tratado de Westminster).
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Haití</h3>
-                        <div class="descripcion">
-                            Independencia de Francia en 1804. Segundo país independiente de América y primero latinoamericano.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Burundi</h3>
-                        <div class="descripcion">
-                            Independencia de Bélgica en 1962.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Canadá</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1867 (reconocida en 1931 con el Tratado de Westminster).
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Nueva Zelanda</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1907 (reconocida en 1931 con el Tratado de Westminster).
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Ruanda</h3>
-                        <div class="descripcion">
-                            Independencia de Bélgica en 1962.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Bosnia y Herzegovina</h3>
-                        <div class="descripcion">
-                            Independencia de Yugoslavia en 1992.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Chipre</h3>
-                        <div class="descripcion">
-                            Independencia de Reino Unido el 16 de agosto de 1960, pero el día de la independencia de Chipre es comúnmente celebrado el 1 de octubre.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Nigeria</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1960
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Uzbekistán</h3>
-                        <div class="descripcion">
-                            Independencia de la Unión Soviética en 1991.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Emiratos Árabes Unidos</h3>
-                        <div class="descripcion">
-                             Independencia del Reino Unido en 1971.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Marruecos</h3>
-                        <div class="descripcion">
-                            Independencia de Francia y España en 1956
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Vietnam</h3>
-                        <div class="descripcion">
-                            Declaración de la independencia de Francia en 1945.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Níger</h3>
-                        <div class="descripcion">
-                            Independencia de Francia en 1960.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Bielorrusia</h3>
-                        <div class="descripcion">
-                            Liberación de Minsk de la ocupación Alemana por tropas Soviéticas en 1944.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Catar</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1971.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Birmania</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1948
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Estados Unidos</h3>
-                        <div class="descripcion">
-                            Declaración de la independencia del Reino Unido en 1776. Consumada el 3 de septiembre de 1783.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Tonga</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1970.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Lesoto</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1966.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Burkina Faso</h3>
-                        <div class="descripcion">
-                            Independencia de Francia en 1960
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Argelia</h3>
-                        <div class="descripcion">
-                            Independencia de Francia en 1962.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Cabo Verde</h3>
-                        <div class="descripcion">
-                            Independencia del Portugal en 1975.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Venezuela</h3>
-                        <div class="descripcion">
-                            Declaración de la independencia de España en 1811.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Bolivia</h3>
-                        <div class="descripcion">
-                            Independencia de España en 1825.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Jamaica</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1962.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>República de Irlanda</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1922.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Malaui</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1964.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Ghana</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1957.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Suazilandia</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1968.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Brasil</h3>
-                        <div class="descripcion">
-                            Declarada la Independencia de Portugal en esa fecha en 1822. No fue reconocida hasta el 29 de agosto de 1825.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Croacia</h3>
-                        <div class="descripcion">
-                            Independencia de Yugoslavia en 1991.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>República de Macedonia del Norte</h3>
-                        <div class="descripcion">
-                             Independencia de Yugoslavia en 1991.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Singapur</h3>
-                        <div class="descripcion">
-                            Marca la separación de Malasia en 1965.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Tanzania</h3>
-                        <div class="descripcion">
-                            Declaración de la independencia del Reino Unido en 1961.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Argentina</h3>
-                        <div class="descripcion">
-                            Independencia de España en 1816.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Rumanía</h3>
-                        <div class="descripcion">
-                            Independencia del Imperio otomano en 1877.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Corea del Norte</h3>
-                        <div class="descripcion">
-                            Fundación del DPRK en 1948.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Tayikistán</h3>
-                        <div class="descripcion">
-                            Independencia de la Unión Soviética en 1991.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Bahamas</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1973.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Chad</h3>
-                        <div class="descripcion">
-                            Independencia de Francia en 1960.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Vaticano</h3>
-                        <div class="descripcion">
-                            Tratado Laterano firmado con Italia en 1929.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Angola</h3>
-                        <div class="descripcion">
-                            Independencia de Portugal en 1975.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Kenia</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1963.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Santo Tomé y Príncipe</h3>
-                        <div class="descripcion">
-                            Independencia de Portugal en 1975.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Filipinas</h3>
-                        <div class="descripcion">
-                            Independencia de España en 1898.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Rusia</h3>
-                        <div class="descripcion">
-                            El 25 de diciembre de 1991 es la separación formal de la Unión
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Mauricio</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1968.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Pakistán</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1947.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Baréin</h3>
-                        <div class="descripcion">
-                            Independencia del Reino Unido en 1971.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Corea del Sur</h3>
-                        <div class="descripcion">
-                            Independencia del Japón en 1945.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Costa Rica</h3>
-                        <div class="descripcion">
-                            Independencia de España en 1821.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>El Salvador</h3>
-                        <div class="descripcion">
-                            Independencia de España en 1821.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Guatemala</h3>
-                        <div class="descripcion">
-                            Independencia de España en 1821.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Honduras</h3>
-                        <div class="descripcion">
-                            Independencia del España en 1821.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>Kazajistán</h3>
-                        <div class="descripcion">
-                            Independencia de la Unión Soviética en 1991.
-                        </div>
-                    </div>
-                    <div class="momento">
-                        <h3>México</h3>
-                        <div class="descripcion">
-                            Independencia de España declarada en 1810, con el Grito de Dolores, consumada el 27 de septiembre de 1821 con la entrada del Ejército Trigarante a la Ciudad de México.
-                        </div>
-                    </div>
+            <div class="Centro">
+                <div class="Jonathan">
+                    <center><img src="Images/Jonathan.jpg" class="Imagen-Jonathan"></center>
+                    <h1>Jonathan Arroyo Rivas</h1>
+                </div>
+                <div class="Jonathan">
+                    <center><img src="Images/Christopher.jpg" class="Imagen-Jonathan"></center>
+                    <center><h1>Christopher Cruz Pérez</h1></center>
+                </div>
+                <div class="Jonathan">
+                    <center><img src="Images/Alma.jpg" class="Imagen-Jonathan"></center>
+                    <center><h1>Alma Delia Ruíz López</h1></center>
+                </div>
+                <div class="Jonathan">
+                    <center><img src="Images/Daniel.jpg" class="Imagen-Jonathan"></center>
+                    <center><h1>Luis Daniel González Marín </h1></center>
                 </div>
             </div>
-                <br><br>
-            <div class="Abajo">
-                <hr><br><br>
-                <center><h1 class="Ejericicios">Ejercicios didacticos </h1></center>
-                <center><h1 class="Letras">Caldo de Letras</h1></center>
-                <center><div id='Palabras'></div></center>
-                <div class="Caldo">
-                    <div id='juego'></div>
-                </div>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <h1 class="Orcado">Ahorcado</h1>
-                <canvas id="pantalla" width="960px" height="450px"> <!-- etiqueta del canvas con sus medidas en la pantalla -->
-        </canvas>
-        <!-- El boton que nos sirve para recargar la pagina y asi generar una nueva palabra y volver a jugar -->
-                <br><br>
-        <center><button id="boton" class="VolverJuagar" type="reset" onclick="javascript:window.location.reload();">Volver a Jugar</button></center>
-            <br>
-                <hr>
-                <center><h1 class="TituloComentario">Agrega un comentario</h1></center>
-                <br>
-        <form id="formularioAlta">
-            <center><input type="text" class="nombre" id="nombre" placeholder="Nombre:"><br><br>
-                <textarea class="comentario" id="comentario" rows="10" placeholder="Comentario:"></textarea><br><br>
-                <button type="button" class="Guardar" disabled="disabled" id="botonGuardar" >Guardar</button>
-            </center>
-        </form>    
-        </div>        
-                
-
-        <script>
-            
-            /* Variables */
-            var ctx;
-            var canvas;
-            var palabra;
-            var letras = "QWERTYUIOPASDFGHJKLÑZXCVBNM";
-            var colorTecla = "#585858";
-            var colorMargen = "red";
-            var inicioX = 200;
-            var inicioY = 300;
-            var lon = 35;
-            var margen = 20;
-            var pistaText = "";
-
-            /* Arreglos */
-            var teclas_array = new Array();
-            var letras_array = new Array();
-            var palabras_array = new Array();
-
-            /* Variables de control */
-            var aciertos = 0;
-            var errores = 0;
-            
-            /* Palabras */
-            palabras_array.push("INDEPENDENCIA");
-            palabras_array.push("MEXICO");
-            palabras_array.push("TRIGARANTE");
-            palabras_array.push("ARMADO");
-            palabras_array.push("ESPAÑA");
-            palabras_array.push("DESIGUALDAD");
-            palabras_array.push("MIGUEL");
-            palabras_array.push("CRIOLLOS");
-            palabras_array.push("CUATRO");
-            palabras_array.push("BONAPARTE");
-            palabras_array.push("CORREGIDORA");
-                    
-            /* Objetos */
-            function Tecla(x, y, ancho, alto, letra){
-                this.x = x;
-                this.y = y;
-                this.ancho = ancho;
-                this.alto = alto;
-                this.letra = letra;
-                this.dibuja = dibujaTecla;
-            }
-            
-            function Letra(x, y, ancho, alto, letra){
-                this.x = x;
-                this.y = y;
-                this.ancho = ancho;
-                this.alto = alto;
-                this.letra = letra;
-                this.dibuja = dibujaCajaLetra;
-                this.dibujaLetra = dibujaLetraLetra;
-            }
-           
-            /* Funciones */
-
-            /* Dibujar Teclas*/
-            function dibujaTecla(){
-                ctx.fillStyle = colorTecla;
-                ctx.strokeStyle = colorMargen;
-                ctx.fillRect(this.x, this.y, this.ancho, this.alto);
-                ctx.strokeRect(this.x, this.y, this.ancho, this.alto);
-                
-                ctx.fillStyle = "white";
-                ctx.font = "bold 20px courier";
-                ctx.fillText(this.letra, this.x+this.ancho/2-5, this.y+this.alto/2+5);
-            }
-            
-            /* Dibua la letra y su caja */
-            function dibujaLetraLetra(){
-                var w = this.ancho;
-                var h = this.alto;
-                ctx.fillStyle = "black";
-                ctx.font = "bold 40px Courier";
-                ctx.fillText(this.letra, this.x+w/2-12, this.y+h/2+14);
-            }
-            function dibujaCajaLetra(){
-                ctx.fillStyle = "white";
-                ctx.strokeStyle = "black";
-                ctx.fillRect(this.x, this.y, this.ancho, this.alto);
-                ctx.strokeRect(this.x, this.y, this.ancho, this.alto);
-            }
-            
-            
-            /// Funcion para dar una pista la usuario ////
-            function pistaFunction(palabra){
-                let pista = ""; // Se crea la variable local pista que contendra nuestra frase de pista
-                switch(palabra){  // Se crea un switch para poder controlar las pistas segun la palabra 
-                    case 'INDEPENDENCIA':   // Se debera hacer un case por cada palabra 
-                        pista = "Levantamiento armado masimportante de esta nación:";
-                        break;     // Es importante el break en cada case 
-                    case 'MEXICO':
-                        pista = "19 de Septiembre se el inicio de la independencia de:";
-                        break;
-                    case 'TRIGARANTE':
-                        pista = "Se concluye la independencia de México cuando llega el ejercito:";
-                        break;
-                    case 'ARMADO':
-                        pista = "Movimiento ______ fue el que inico la independencia:";
-                        break;
-                    case 'ESPAÑA':
-                        pista = "México no era libre por la Nueva: ";
-                    break;
-                    case 'DESIGUALDAD':
-                        pista = "En lo social predominaba un ambiente de: ";
-                    break;
-                    case 'MIGUEL':
-                        pista = "Se le conoce como padre de la patria:";
-                    break;
-                    case 'CRIOLLOS':
-                        pista = "Son nacidos en el continente americano, pero con un origen europeo:";
-                    break;
-                    case 'CRIOLLOS':
-                        pista = "Son nacidos en el continente americano, pero con un origen europeo:";
-                    break;
-                    case 'CUATRO':
-                        pista = "Son ______ etapas en la que está dividida la independencia de México:";
-                    break;
-                    case 'BONAPARTE':
-                        pista = "Militar francés que tuvo una imposición para ser rey:";
-                    break;
-                    case 'CORREGIDORA':
-                        pista = "Se llama María Josefa Crescencia y Ortiz Téllez-Girón mejor conocida como:";
-                    break;
-                    default:  // El defaul se puede omitir // 
-                        pista="No hay pista aun xP";
-                }
-                // Pintamos la palabra en el canvas , en este ejemplo se pinta arriba a la izquierda //
-                ctx.fillStyle = "black";  // Aqui ponemos el color de la letra
-                ctx.font = "arial 1px";  // aqui ponemos el tipo y tamaño de la letra
-                ctx.fillText(pista, 10, 15);  // aqui ponemos la frase en nuestro caso la variable pista , seguido de la posx y posy
-            }
-           
-                    
-             /* Distribuir nuestro teclado con sus letras respectivas al acomodo de nuestro array */
-            function teclado(){
-                var ren = 0;
-                var col = 0;
-                var letra = "";
-                var miLetra;
-                var x = inicioX;
-                var y = inicioY;
-                for(var i = 0; i < letras.length; i++){
-                    letra = letras.substr(i,1);
-                    miLetra = new Tecla(x, y, lon, lon, letra);
-                    miLetra.dibuja();
-                    teclas_array.push(miLetra);
-                    x += lon + margen;
-                    col++;
-                    if(col==10){
-                        col = 0;
-                        ren++;
-                        if(ren==2){
-                            x = 280;
-                        } else {
-                            x = inicioX;
-                        }
-                    }
-                    y = inicioY + ren * 50;
-                }
-            }
-            
-            
-            /* aqui obtenemos nuestra palabra aleatoriamente y la dividimos en letras */
-            function pintaPalabra(){
-                var p = Math.floor(Math.random()*palabras_array.length);
-                palabra = palabras_array[p];
-      
-                pistaFunction(palabra);
-            
-                var w = canvas.width;
-                var len = palabra.length;
-                var ren = 0;
-                var col = 0;
-                var y = 230;
-                var lon = 50;
-                var x = (w - (lon+margen) *len)/2;
-                for(var i=0; i<palabra.length; i++){
-                    letra = palabra.substr(i,1);
-                    miLetra = new Letra(x, y, lon, lon, letra);
-                    miLetra.dibuja();
-                    letras_array.push(miLetra);
-                    x += lon + margen;
-                }
-            }
-            
-            /* dibujar cadalzo y partes del pj segun sea el caso */
-            function horca(errores){
-                var imagen = new Image();
-                imagen.src = "Images/ahorcado"+errores+".png";
-                imagen.onload = function(){
-                    ctx.drawImage(imagen, 390, 0, 230, 230);
-                }
-                /*************************************************
-                // Imagen 2 mas pequeña a un lado de la horca //       
-                var imagen = new Image();
-                imagen.src = "imagenes/ahorcado"+errores+".png";
-                imagen.onload = function(){
-                    ctx.drawImage(imagen, 620, 0, 100, 100);
-                }
-                *************************************************/
-            }
-            
-            /* ajustar coordenadas */
-            function ajusta(xx, yy){
-                var posCanvas = canvas.getBoundingClientRect();
-                var x = xx-posCanvas.left;
-                var y = yy-posCanvas.top;
-                return{x:x, y:y}
-            }
-            
-            /* Detecta tecla clickeada y la compara con las de la palabra ya elegida al azar */
-            function selecciona(e){
-                var pos = ajusta(e.clientX, e.clientY);
-                var x = pos.x;
-                var y = pos.y;
-                var tecla;
-                var bandera = false;
-                for (var i = 0; i < teclas_array.length; i++){
-                    tecla = teclas_array[i];
-                    if (tecla.x > 0){
-                        if ((x > tecla.x) && (x < tecla.x + tecla.ancho) && (y > tecla.y) && (y < tecla.y + tecla.alto)){
-                            break;
-                        }
-                    }
-                }
-                if (i < teclas_array.length){
-                    for (var i = 0 ; i < palabra.length ; i++){ 
-                        letra = palabra.substr(i, 1);
-                        if (letra == tecla.letra){ /* comparamos y vemos si acerto la letra */
-                            caja = letras_array[i];
-                            caja.dibujaLetra();
-                            aciertos++;
-                            bandera = true;
-                        }
-                    }
-                    if (bandera == false){ /* Si falla aumenta los errores y checa si perdio para mandar a la funcion gameover */
-                        errores++;
-                        horca(errores);
-                        if (errores == 5) gameOver(errores);
-                    }
-                    /* Borra la tecla que se a presionado */
-                    ctx.clearRect(tecla.x - 1, tecla.y - 1, tecla.ancho + 2, tecla.alto + 2);
-                    tecla.x - 1;
-                    /* checa si se gano y manda a la funcion gameover */
-                    if (aciertos == palabra.length) gameOver(errores);
-                }
-            }
-            
-            /* Borramos las teclas y la palabra con sus cajas y mandamos msj segun el caso si se gano o se perdio */
-            function gameOver(errores){
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                ctx.fillStyle = "black";
-
-                ctx.font = "bold 50px Courier";
-                if (errores < 5){
-                    ctx.fillText("Muy bien, la palabra es: ", 110, 280);
-                } else {
-                    ctx.fillText("Lo sentimos, la palabra era: ", 110, 280);
-                }
-                
-                ctx.font = "bold 80px Courier";
-                lon = (canvas.width - (palabra.length*48))/2;
-                ctx.fillText(palabra, lon, 380);
-                horca(errores);
-            }
-            
-            /* Detectar si se a cargado nuestro contexco en el canvas, iniciamos las funciones necesarias para jugar o se le manda msj de error segun sea el caso */
-            window.onload = function(){
-                canvas = document.getElementById("pantalla");
-                if (canvas && canvas.getContext){
-                    ctx = canvas.getContext("2d");
-                    if(ctx){
-                        teclado();
-                        pintaPalabra();
-                        horca(errores);
-                        canvas.addEventListener("click", selecciona, false);
-                    } else {
-                        alert ("Error al cargar el contexto!");
-                    }
-                }
-            }
-        </script>
-                
-        </div>
-        </div>
-        <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
-    <script type="text/javascript" src="Scripts/wordfind.js"></script> 
-    <script type="text/javascript" src="Scripts/wordfindgame.js"></script>
-        <script src="Scripts/comentario-contexto.js"></script>
-            <script>
-    var words = ['MEXICO','INDEPENDENCIA','ESPAÑA','TRIGARANTE','DOLORES', 'BONAPARTE', 'INCONFORMIDAD', 'REY', 'CRIOLLOS', 'DESIGUALDAD'];
-    var gamePuzzle = wordfindgame.create(words, '#juego', '#Palabras'); 
-        
-    var puzzle = wordfind.newPuzzle(words,{height: 18, width:18, fillBlanks: false});
-    wordfind.print(puzzle);   
-        
-    $('#solve').click( function() {wordfindgame.solve(gamePuzzle, words);});
-        
-    </script>
-        
-    </body>
+            </div>
+        </div>   
+</body>
 </html>
